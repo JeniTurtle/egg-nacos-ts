@@ -75,7 +75,7 @@ export default class AgentBootHook {
     // 把nacos远程配置保存到临时文件，供appWorker调用。
     await saveNacosRemoteConfig(this.agent);
     // 后面用不到的话可以关掉
-    // this.app.nacosConfig.close();
+    // this.agent.nacosConfig.close();
   }
 }
 ```
