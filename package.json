@@ -1,0 +1,39 @@
+{
+  "name": "egg-nacos-ts",
+  "version": "1.0.1",
+  "description": "Nacos plugin for egg",
+  "eggPlugin": {
+    "name": "nacos"
+  },
+  "keywords": [
+    "egg",
+    "eggPlugin",
+    "egg-plugin",
+    "nacos"
+  ],
+  "scripts": {
+    "build": "tsc -d"
+  },
+  "dependencies": {
+    "egg": "^2.26.0",
+    "nacos": "^2.0.0",
+    "uuid": "^3.3.3"
+  },
+  "devDependencies": {
+    "@types/node": "^7.10.5",
+    "autod": "^3.0.1",
+    "autod-egg": "^1.1.0",
+    "egg-bin": "^4.13.1",
+    "egg-ci": "^1.8.0",
+    "egg-mock": "^3.16.0",
+    "egg-ts-helper": "^1.25.5",
+    "tsconfig-paths": "^3.8.0",
+    "tslib": "^1.9.0",
+    "tslint": "^5.0.0",
+    "tslint-config-egg": "^1.0.0",
+    "typescript": "^3.7.3"
+  },
+  "engines": {
+    "node": ">=8.9.0"
+  }
+}
