@@ -17,7 +17,7 @@ yarn add egg-nacos-ts
 import { EggPlugin } from 'egg';
 
 const plugin: EggPlugin = {
-  dubbo: {
+  nacos: {
     enable: true,
     package: 'egg-nacos-ts',
   },
