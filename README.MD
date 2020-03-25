@@ -74,8 +74,6 @@ export default class AgentBootHook {
   async didReady() {
     // 把nacos远程配置保存到临时文件，供appWorker调用。
     await saveNacosRemoteConfig(this.agent);
-    // 后面用不到的话可以关掉
-    // this.agent.nacosConfig.close();
   }
 }
 ```
@@ -92,10 +90,7 @@ export default class AppBoot implements IBoot {
     initNacosConfig(this.app);
   }
 
-  async didReady() {
-    // 用不到的话可以关掉
-    // this.app.nacosConfig.close();
-  }
+  async didReady() {}
   async beforeClose() {}
 }
 ```
