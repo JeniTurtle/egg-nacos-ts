@@ -48,7 +48,7 @@ export default class NacosNaming {
     if (nacos.subscribers) {
       const subscribers = Object.values(nacos.subscribers) as SubscriberConfig[];
       subscribers.forEach(service => {
-        this._nacosNamingClient.subscribe(service.serviceName, hosts => {
+        this._nacosNamingClient.subscribe(service, hosts => {
           this.agent.logger.info(`[egg-nacos] New service detected: ${JSON.stringify(hosts)}`);
         });
       });
@@ -61,7 +61,7 @@ export default class NacosNaming {
       const providers = Object.values(nacos.providers) as ProviderConfig[];
       providers.forEach(async service => {
         await this._nacosNamingClient.deregisterInstance(
-          service.serviceName,
+          service,
           {
             ...service.instance,
           },
@@ -76,7 +76,7 @@ export default class NacosNaming {
     if (nacos.subscribers) {
       const subscribers = Object.values(nacos.subscribers) as SubscriberConfig[];
       subscribers.forEach(service => {
-        this._nacosNamingClient.unSubscribe(service.serviceName, () => {});
+        this._nacosNamingClient.unSubscribe(service, () => {});
       });
     }
   }

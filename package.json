@@ -1,6 +1,6 @@
 {
   "name": "egg-nacos-ts",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Nacos plugin for egg",
   "eggPlugin": {
     "name": "nacos"
